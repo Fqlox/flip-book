@@ -1,0 +1,49 @@
+@import "../fonts/halibutSerif/halibut.css";
+         
+:root {
+    --txt-width: 200;
+    --txt-weight: 200;
+
+}
+
+body {
+    margin:0;
+}
+#input span {
+    font-family: 'halibut', serif;
+    font-variation-settings: 'wght' var(--txt-weight), 'wdth' var(--txt-width);
+
+}
+/* Chaque frame  
+    74 × 105 mm A7
+*/
+.frame {
+    height: 72mm;
+    width: 105mm;
+    page-break-after: always;
+
+}
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    font-family: 'halibut', serif;
+    font-variation-settings: 'wght' var(--txt-weight), 'wdth' var(--txt-width);
+    transform: translateY(calc(74mm / 2 - 12pt));
+    font-size: 12pt;
+    text-align: center;
+
+
+}
+@media print {
+body {
+    margin: 0
+}
+  /* All your print styles go here */
+  @page {
+    margin: 0;
+  size: 105mm 74mm;
+}
+}
